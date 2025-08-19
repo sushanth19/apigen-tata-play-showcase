@@ -3,7 +3,9 @@ import DemoHeader from "@/components/DemoHeader";
 import SlideIntro from "@/components/slides/SlideIntro";
 import SlideApigen from "@/components/slides/SlideApigen";
 import SlideTataPlay from "@/components/slides/SlideTataPlay";
+import SlideDemoBackend from "@/components/slides/SlideDemoBackend";
 import SlideTechnical from "@/components/slides/SlideTechnical";
+import SlideValueProposition from "@/components/slides/SlideValueProposition";
 import SlideCTA from "@/components/slides/SlideCTA";
 
 const DemoPresentation = () => {
@@ -13,7 +15,9 @@ const DemoPresentation = () => {
     { component: SlideIntro, title: "Soil Soft Technologies" },
     { component: SlideApigen, title: "APIGEN Platform" },
     { component: SlideTataPlay, title: "DTH API Solutions" },
+    { component: SlideDemoBackend, title: "Live Backend Demo" },
     { component: SlideTechnical, title: "Technical Capabilities" },
+    { component: SlideValueProposition, title: "Value Proposition" },
     { component: SlideCTA, title: "Proof of Concept" }
   ];
 
