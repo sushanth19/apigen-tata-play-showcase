@@ -1,100 +1,79 @@
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Code, Zap, Shield, Target, Database, Settings } from "lucide-react";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileJson, Upload, Zap, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const SlideApigen = () => {
   return (
-    <section className="min-h-screen flex items-center bg-white py-20">
+    <section className="min-h-screen bg-gradient-to-br from-background to-secondary/20 py-20">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
-          <img 
-            src="/lovable-uploads/7814459c-190e-4124-934d-b97c24411d2a.png" 
-            alt="APIGEN" 
-            className="h-20 w-auto mx-auto mb-8"
-          />
-          <h1 className="text-5xl md:text-6xl font-bold text-navy mb-6">
-            APIGEN
-          </h1>
-          <p className="text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Advanced API Testing & Validation Platform for Enterprise Applications
-          </p>
-          <Badge className="mt-4 text-lg px-6 py-2">
-            Backend API Testing Specialist
+          <Badge variant="secondary" className="mb-6 text-lg px-6 py-2">
+            <Zap className="mr-2 w-5 h-5" />
+            Next-Gen Testing Platform
           </Badge>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            What is API Gen?
+          </h1>
+          <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+            A powered next-generation testing platform for backend APIs. Simply provide your 
+            Swagger JSON or Postman collection, and watch the magic happen.
+          </p>
         </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
-                <Code className="w-8 h-8 text-primary" />
+
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div>
+              <h2 className="text-3xl font-bold mb-6">Simple Input, Powerful Output</h2>
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <FileJson className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Swagger JSON</h3>
+                    <p className="text-muted-foreground">Import your OpenAPI specifications directly for comprehensive API coverage</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mr-4 flex-shrink-0">
+                    <Upload className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2">Postman Collections</h3>
+                    <p className="text-muted-foreground">Seamlessly integrate with your existing Postman workflows and environments</p>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold text-navy mb-3">Swagger Integration</h3>
-              <p className="text-muted-foreground">
-                Native support for OpenAPI/Swagger specifications with automatic test case generation
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4 group-hover:bg-accent/20 transition-colors">
-                <Database className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-3">Postman Collections</h3>
-              <p className="text-muted-foreground">
-                Import and execute Postman collections with advanced assertion capabilities
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
-                <Zap className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-3">Automated Testing</h3>
-              <p className="text-muted-foreground">
-                AI-powered test generation with intelligent endpoint discovery and validation
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4 group-hover:bg-accent/20 transition-colors">
-                <Shield className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-3">Security Testing</h3>
-              <p className="text-muted-foreground">
-                Comprehensive security validation including authentication, authorization, and data protection
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-full mb-4 group-hover:bg-primary/20 transition-colors">
-                <Target className="w-8 h-8 text-primary" />
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-3">Performance Testing</h3>
-              <p className="text-muted-foreground">
-                Load testing and performance benchmarking for high-traffic API endpoints
-              </p>
-            </CardContent>
-          </Card>
-          
-          <Card className="demo-card group hover:shadow-glow">
-            <CardContent className="pt-6 text-center">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-accent/10 rounded-full mb-4 group-hover:bg-accent/20 transition-colors">
-                <Settings className="w-8 h-8 text-accent" />
-              </div>
-              <h3 className="text-xl font-bold text-navy mb-3">CI/CD Integration</h3>
-              <p className="text-muted-foreground">
-                Seamless integration with DevOps pipelines and continuous testing workflows
-              </p>
-            </CardContent>
-          </Card>
+            </div>
+            
+            <div className="relative">
+              <Card className="p-8 border-2 border-primary/20 bg-gradient-to-br from-primary/5 to-accent/5">
+                <CardHeader className="text-center pb-6">
+                  <CardTitle className="text-2xl font-bold">Transform Your Testing</CardTitle>
+                  <CardDescription className="text-lg">From specification to comprehensive testing in minutes</CardDescription>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <div className="flex items-center justify-between p-3 bg-background rounded-lg">
+                    <span className="font-medium">Upload API Spec</span>
+                    <ArrowRight className="w-4 h-4 text-primary" />
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-background rounded-lg">
+                    <span className="font-medium">Generate Tests</span>
+                    <ArrowRight className="w-4 h-4 text-primary" />
+                  </div>
+                  <div className="flex items-center justify-between p-3 bg-background rounded-lg">
+                    <span className="font-medium">Execute & Analyze</span>
+                    <ArrowRight className="w-4 h-4 text-primary" />
+                  </div>
+                  <Button className="w-full mt-6">
+                    Start Testing Now
+                  </Button>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
       </div>
     </section>

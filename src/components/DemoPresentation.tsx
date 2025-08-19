@@ -2,23 +2,19 @@ import { useState, useEffect } from "react";
 import DemoHeader from "@/components/DemoHeader";
 import SlideIntro from "@/components/slides/SlideIntro";
 import SlideApigen from "@/components/slides/SlideApigen";
-import SlideTataPlay from "@/components/slides/SlideTataPlay";
+import SlideWhyApigen from "@/components/slides/SlideWhyApigen";
 import SlideDemoBackend from "@/components/slides/SlideDemoBackend";
-import SlideTechnical from "@/components/slides/SlideTechnical";
-import SlideValueProposition from "@/components/slides/SlideValueProposition";
-import SlideCTA from "@/components/slides/SlideCTA";
+import SlideFeatures2 from "@/components/slides/SlideFeatures2";
 
 const DemoPresentation = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   
   const slides = [
-    { component: SlideIntro, title: "Soil Soft Technologies" },
-    { component: SlideApigen, title: "APIGEN Platform" },
-    { component: SlideTataPlay, title: "DTH API Solutions" },
-    { component: SlideDemoBackend, title: "Live Backend Demo" },
-    { component: SlideTechnical, title: "Technical Capabilities" },
-    { component: SlideValueProposition, title: "Value Proposition" },
-    { component: SlideCTA, title: "Proof of Concept" }
+    { component: SlideIntro, title: "Soil Soft Technologies Pvt Ltd" },
+    { component: SlideApigen, title: "What is API Gen?" },
+    { component: SlideWhyApigen, title: "Why API Gen?" },
+    { component: SlideDemoBackend, title: "Live Demo" },
+    { component: SlideFeatures2, title: "2.0 Features" }
   ];
 
   const handlePrevious = () => {
