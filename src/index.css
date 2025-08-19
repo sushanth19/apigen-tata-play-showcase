@@ -181,4 +181,9 @@ All colors MUST be HSL.
   .demo-button-accent {
     @apply bg-accent text-accent-foreground px-8 py-4 rounded-lg font-semibold shadow-card hover:shadow-elegant transition-all duration-300 hover:scale-105;
   }
+
+  /* Slide transitions */
+  .slide-container {
+    @apply transition-all duration-500 ease-in-out;
+  }
 }

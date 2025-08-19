@@ -1,21 +1,7 @@
-import DemoHeader from "@/components/DemoHeader";
-import DemoHero from "@/components/DemoHero";
-import DemoFeatures from "@/components/DemoFeatures";
-import DemoBenefits from "@/components/DemoBenefits";
-import DemoCTA from "@/components/DemoCTA";
+import DemoPresentation from "@/components/DemoPresentation";
 
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <DemoHeader />
-      <main>
-        <DemoHero />
-        <DemoFeatures />
-        <DemoBenefits />
-        <DemoCTA />
-      </main>
-    </div>
-  );
+  return <DemoPresentation />;
 };
 
 export default Index;
